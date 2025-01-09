@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Protetor de PDF</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Protetor de PDF</h1>
+        <h2>Suba seu PDF para protegê-lo contra pirataria</h2>
+        <form method="POST" enctype="multipart/form-data" id="pdf-form">
+            {{ form.hidden_tag() }}
+
+            <!-- CPF -->
+            <div>
+                <label for="cpf">CPF</label><br>
+                {{ form.cpf(size=20) }}
+            </div>
+
+            <!-- Posição -->
+            <div>
+                <label for="position">Posição</label><br>
+                {{ form.position() }}
+            </div>
+
+            <!-- Cor -->
+            <div>
+                <label for="color">Cor</label><br>
+                <input type="color" name="color" id="color">
+            </div>
+
+            <!-- Arquivo -->
+            <div>
+                <label for="file">Escolher arquivo</label><br>
+                <input type="file" name="file" id="file" required>
+            </div>
+
+            <!-- Botão de Submissão -->
+            <div>
+                <input type="submit" value="Submeter">
+            </div>
+
+            <!-- Mensagens de Erro -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+
+        </form>
+    </div>
+
+    <script>
+        // Seleciona o formulário pelo ID
+        const form = document.getElementById('pdf-form');
+
+        // Adiciona um evento ao submeter o formulário
+        form.addEventListener('submit', function (event) {
+            // Permite o envio do formulário
+            setTimeout(() => {
+                // Limpa todos os campos após o envio
+                form.reset();
+            }, 100); // Adiciona um pequeno atraso para não interferir no envio
+        });
+    </script>
+</body>
+
+</html>

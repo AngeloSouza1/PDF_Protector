@@ -1,0 +1,122 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* Fundo claro */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Texto em cinza escuro */
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff; /* Fundo branco */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #000; /* Preto */
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555; /* Cinza médio */
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333; /* Cinza escuro */
+}
+
+input[type="text"],
+input[type="file"],
+input[type="color"],
+input[type="submit"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd; /* Cinza claro */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #f9f9f9; /* Fundo branco sujo */
+  color: #333; /* Cinza escuro */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+input[type="color"]:focus,
+select:focus {
+  border-color: #888; /* Cinza médio */
+  box-shadow: 0 0 5px rgba(136, 136, 136, 0.5);
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #000; /* Preto */
+  color: #fff; /* Branco */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #333; /* Cinza escuro */
+  transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.flashes {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  color: #d9534f; /* Vermelho claro */
+  font-size: 14px;
+}
+
+.flashes li {
+  margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 24px;
+  }
+
+  h2 {
+      font-size: 16px;
+  }
+
+  input[type="submit"] {
+      font-size: 14px;
+      padding: 12px 20px;
+  }
+}
