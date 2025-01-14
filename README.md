@@ -51,6 +51,11 @@ Certifique-se de ter os seguintes itens instalados no seu ambiente:
    ```
 
 5. Acesse a aplicação em: [http://localhost:5000](http://localhost:5000)
+Video Demonstrativo
+
+
+https://github.com/user-attachments/assets/7e5b94c5-04f0-49bb-9b66-68afcfaf0c73
+
 
 ---
 
