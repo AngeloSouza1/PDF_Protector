@@ -51,6 +51,7 @@ Certifique-se de ter os seguintes itens instalados no seu ambiente:
    ```
 
 5. Acesse a aplicação em: [http://localhost:5000](http://localhost:5000)
+
 Video Demonstrativo
 
 
